@@ -147,7 +147,7 @@ extension NSDate {
     /// 闰年
     var isLeapYearSwift: Bool {
         get {
-            let year = self.year;
+            let year = self.yearSwift;
             return ((year % 400 == 0) || (year % 100 == 0) || (year % 4 == 0));
         }
     }
@@ -158,7 +158,7 @@ extension NSDate {
             if (fabs(self.timeIntervalSinceNow) >= Double(kNSDATE_DAY_SEC)) {
                 return false;
             }
-            return NSDate.init().day == self.day;
+            return NSDate.init().daySwift == self.day;
         }
     }
 }

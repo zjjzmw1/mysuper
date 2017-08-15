@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 private var _kLoading = "kLoading";
 

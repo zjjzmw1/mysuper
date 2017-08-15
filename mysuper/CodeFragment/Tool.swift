@@ -11,6 +11,7 @@ import UIKit
 import SwiftyJSON
 import HandyJSON
 import MediaPlayer
+import MapKit
 
 /// 网络返回的成功码
 let kSuccessCode = 200
@@ -67,15 +68,16 @@ func SLog<T>(_ messsage: T, time: NSDate = NSDate(), file: String = #file, funcN
 /// - Parameter str: 需要加密的字符串
 /// - Returns: 32位大写加密
 func md5(_ str: String) -> String {
-    let cStr = str.cString(using: String.Encoding.utf8)
-    let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: 16)
-    CC_MD5(cStr!,(CC_LONG)(strlen(cStr!)), buffer)
-    let md5String = NSMutableString()
-    for i in 0 ..< 16 {
-        md5String.appendFormat("%02x", buffer[i])
-    }
-    free(buffer)
-    return md5String as String
+//    let cStr = str.cString(using: String.Encoding.utf8)
+//    let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: 16)
+//    CC_MD5(cStr!,(CC_LONG)(strlen(cStr!)), buffer)
+//    let md5String = NSMutableString()
+//    for i in 0 ..< 16 {
+//        md5String.appendFormat("%02x", buffer[i])
+//    }
+//    free(buffer)
+//    return md5String as String
+    return ""
 }
 
 public class Tool: NSObject,UIActionSheetDelegate {
@@ -304,36 +306,36 @@ public class Tool: NSObject,UIActionSheetDelegate {
     }
     
     /// 获取地图显示区域
-    class func getMapRegion(annotations: [Station]) -> MKCoordinateRegion? {
-        if annotations.count == 0 {
-            return nil
-        }
-        var coordinate = CLLocationCoordinate2DMake(0, 0)
-        coordinate = annotations[0].coordinate
-        var max_lat = coordinate.latitude
-        var min_lat = coordinate.latitude
-        var max_lon = coordinate.longitude
-        var min_lon = coordinate.longitude
-        
-        for coor in annotations {
-            if coor.latitude > max_lat {
-                max_lat = coor.latitude
-            }
-            if coor.latitude < min_lat {
-                min_lat = coor.latitude
-            }
-            if coor.longitude > max_lon {
-                max_lon = coor.longitude
-            }
-            if coor.longitude < min_lon {
-                min_lon = coor.longitude
-            }
-        }
-        let center = CLLocationCoordinate2DMake((max_lat + min_lat)/2.0, (max_lon + min_lon)/2.0)
-        let span = MKCoordinateSpanMake((max_lat - min_lat) * 1.5, (max_lon - min_lon) * 1.5) // 加 2是避免太靠边了
-//        SLog("center===\(center),,,span===\(span)")
-        return MKCoordinateRegionMake(center, span)
-    }
+//    class func getMapRegion(annotations: [Station]) -> MKCoordinateRegion? {
+//        if annotations.count == 0 {
+//            return nil
+//        }
+//        var coordinate = CLLocationCoordinate2DMake(0, 0)
+//        coordinate = annotations[0].coordinate
+//        var max_lat = coordinate.latitude
+//        var min_lat = coordinate.latitude
+//        var max_lon = coordinate.longitude
+//        var min_lon = coordinate.longitude
+//
+//        for coor in annotations {
+//            if coor.latitude > max_lat {
+//                max_lat = coor.latitude
+//            }
+//            if coor.latitude < min_lat {
+//                min_lat = coor.latitude
+//            }
+//            if coor.longitude > max_lon {
+//                max_lon = coor.longitude
+//            }
+//            if coor.longitude < min_lon {
+//                min_lon = coor.longitude
+//            }
+//        }
+//        let center = CLLocationCoordinate2DMake((max_lat + min_lat)/2.0, (max_lon + min_lon)/2.0)
+//        let span = MKCoordinateSpanMake((max_lat - min_lat) * 1.5, (max_lon - min_lon) * 1.5) // 加 2是避免太靠边了
+////        SLog("center===\(center),,,span===\(span)")
+//        return MKCoordinateRegionMake(center, span)
+//    }
     
     
     // MARK: swift 保存Handy model为json到本地    !!!!!!!!

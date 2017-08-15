@@ -7,18 +7,19 @@
 //
 
 import Foundation
+import UIKit
 
 extension UIButton {
     
     /// - 设置按钮是否可以点击的状态 （不可点击为灰色，可点击为蓝色）
     public func setButtonEnabled(isEnable: Bool) {
         if isEnable {
-            self.backgroundColor = UIColor.getMain()
+            self.backgroundColor = UIColor.getMainColorSwift()
             self.setTitleColor(UIColor.white, for: .normal)
             self.isUserInteractionEnabled = true
         } else {
             self.backgroundColor = UIColor.colorRGB16(value: 0xececec)
-            self.setTitleColor(UIColor.getContentSecond(), for: .normal)
+            self.setTitleColor(UIColor.getContentSecondColorSwift(), for: .normal)
             self.isUserInteractionEnabled = false
         }
     }

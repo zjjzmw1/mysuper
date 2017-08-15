@@ -151,6 +151,8 @@ public class XHTabBar:UITabBarController {
             
             // 将类名转化为类
             let cls: AnyClass? = NSClassFromString(ns + "." + className)
+//            let cls: AnyClass? = NSClassFromString(className)
+            
             
             //Swift中如果想通过一个Class来创建一个对象, 必须告诉系统这个Class的确切类型
             guard let vcCls = cls as? UIViewController.Type else
@@ -159,9 +161,9 @@ public class XHTabBar:UITabBarController {
                 return
             }
             let vc = vcCls.init()
-            let nav = UINavigationController(rootViewController:vc)
+//            let nav = UINavigationController(rootViewController:vc)
             // 自定义导航栏
-//            let nav = KDInteractiveNavigationController(rootViewController: vc)
+            let nav = KDInteractiveNavigationController(rootViewController: vc)
             navArray.append(nav)
         }
         

@@ -18,13 +18,13 @@ extension UIView {
     }
     
     /// - UIView通用的点击事件 - 返回self (返回的直接用就可以，不会引起循环引用)
-    func setTapAction(complation: @escaping (Any?)->Void) -> Void {
-        self.isUserInteractionEnabled = true
-        let tap = UITapGestureRecognizer.init() { (tap) in
-            complation(self)
-        }
-        self.addGestureRecognizer(tap)
-    }
+//    func setTapAction(complation: @escaping (Any?)->Void) -> Void {
+//        self.isUserInteractionEnabled = true
+//        let tap = UITapGestureRecognizer.init() { (tap) in
+//            complation(self)
+//        }
+//        self.addGestureRecognizer(tap)
+//    }
 
     /// 获取View所在的控制器，响应链上的第一个Controller
     func topVC() -> UIViewController? {
@@ -187,16 +187,16 @@ extension UIView {
         }
     }
     
-    // 右间距
-    var rightSpacing: CGFloat {
-        set {
-            self.width = (self.superview?.width)! - rightSpacing - self.x;
-        }
-        
-        get {
-            return (self.superview?.width)! - self.width - self.x;
-        }
-    }
+//    // 右间距
+//    var rightSpacing: CGFloat {
+//        set {
+//            self.width = (self.superview?.width)! - rightSpacing - self.x;
+//        }
+//
+//        get {
+//            return (self.superview?.width)! - self.width - self.x;
+//        }
+//    }
     
     // 上间距
     var topSpacing: CGFloat {
@@ -209,14 +209,14 @@ extension UIView {
         }
     }
     
-    // 下间距
-    var bottomSpacing: CGFloat {
-        set {
-            self.height = (self.superview?.height)! - bottomSpacing - self.y;
-        }
-        
-        get {
-            return (self.superview?.height)! - self.height - self.y;
-        }
-    }
+//    // 下间距
+//    var bottomSpacing: CGFloat {
+//        set {
+//            self.height = (self.superview?.height)! - bottomSpacing - self.y;
+//        }
+//
+//        get {
+//            return (self.superview?.height)! - self.height - self.y;
+//        }
+//    }
 }

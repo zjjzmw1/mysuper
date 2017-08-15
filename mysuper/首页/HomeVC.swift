@@ -9,5 +9,10 @@
 import UIKit
 
 class HomeVC: BaseViewController {
-
+    
+    override func viewDidLoad() {
+        self.view.backgroundColor = UIColor.getMainColorSwift()
+        self.addTitle(titleString: "首页")
+    }
+    
 }
