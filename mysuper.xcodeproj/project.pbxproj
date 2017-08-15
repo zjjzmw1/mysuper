@@ -53,6 +53,8 @@
 		BD0178AB1F428A82002A00F2 /* XHTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0178801F428A82002A00F2 /* XHTabBar.swift */; };
 		BD0178AE1F428C63002A00F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0178AD1F428C63002A00F2 /* UIKit.framework */; };
 		BD2F78451F42D05A00BA5055 /* JHNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F78441F42D05A00BA5055 /* JHNetwork.swift */; };
+		BD2F78471F42DE4200BA5055 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F78461F42DE4200BA5055 /* CartVC.swift */; };
+		BD2F78491F42DE5100BA5055 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F78481F42DE5100BA5055 /* MeVC.swift */; };
 		BDB0E3A11F42A0780012E4BD /* EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB0E3931F42900A0012E4BD /* EmptyView.m */; };
 		BDB0E3A21F42A07F0012E4BD /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB0E39F1F429DC00012E4BD /* UIView+Utils.m */; };
 		BDB0E3A51F42A2420012E4BD /* Tooles.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB0E3941F42940A0012E4BD /* Tooles.m */; };
@@ -116,6 +118,8 @@
 		BD0178801F428A82002A00F2 /* XHTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHTabBar.swift; sourceTree = "<group>"; };
 		BD0178AD1F428C63002A00F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BD2F78441F42D05A00BA5055 /* JHNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHNetwork.swift; sourceTree = "<group>"; };
+		BD2F78461F42DE4200BA5055 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		BD2F78481F42DE5100BA5055 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		BDB0E38D1F428F540012E4BD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BDB0E38E1F428F5E0012E4BD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BDB0E38F1F428F670012E4BD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -204,6 +208,7 @@
 		BD0178471F428A82002A00F2 /* 购物车 */ = {
 			isa = PBXGroup;
 			children = (
+				BD2F78461F42DE4200BA5055 /* CartVC.swift */,
 			);
 			path = "购物车";
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 		BD01784A1F428A82002A00F2 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				BD2F78481F42DE5100BA5055 /* MeVC.swift */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -595,6 +601,7 @@
 				BD0178811F428A82002A00F2 /* HomeVC.swift in Sources */,
 				BD01789C1F428A82002A00F2 /* RHRefreshHeader.swift in Sources */,
 				BD0178A81F428A82002A00F2 /* KDInteractiveNavigationController.swift in Sources */,
+				BD2F78471F42DE4200BA5055 /* CartVC.swift in Sources */,
 				BD01789A1F428A82002A00F2 /* DispatchQueue+IOSUtil.swift in Sources */,
 				BD0178891F428A82002A00F2 /* Bundle+JCBundle.swift in Sources */,
 				BD0178A01F428A82002A00F2 /* ThridMacros.swift in Sources */,
@@ -622,6 +629,7 @@
 				BD0178AB1F428A82002A00F2 /* XHTabBar.swift in Sources */,
 				BD0178A51F428A82002A00F2 /* PathMacros.swift in Sources */,
 				BD2F78451F42D05A00BA5055 /* JHNetwork.swift in Sources */,
+				BD2F78491F42DE5100BA5055 /* MeVC.swift in Sources */,
 				BD0178A91F428A82002A00F2 /* IndicatorView.swift in Sources */,
 				BD0178971F428A82002A00F2 /* DragableTableExtension.swift in Sources */,
 				BD01788A1F428A82002A00F2 /* UIView+IOSUtil.swift in Sources */,

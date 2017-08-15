@@ -20,13 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame:UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
         // 控制器名字数组
-        let  controllerArray = ["HomeVC","HomeVC","HomeVC","HomeVC"]
+        let  controllerArray = ["HomeVC","CartVC","MeVC"]
         // 标题数组
-        let  titleArray = ["首页","购物车","收藏","我的"]
+        let  titleArray = ["首页","购物车","我的"]
         // icon 未选中的数组
-        let  imageArray = ["account_normal","home_normal","message_normal","mycity_normal"]
+        let  imageArray = ["tab_0","tab_1","tab_2"]
         // icon 选中的数组
-        let  selImageArray = ["account_highlight","home_highlight","message_highlight","mycity_highlight"]
+        let  selImageArray = ["tab_0_sel","tab_1_sel","tab_2_sel"]
         // tabbar高度最小值49.0, 传nil或<49.0均按49.0处理
         let height = CGFloat(49)
         // tabBarController
