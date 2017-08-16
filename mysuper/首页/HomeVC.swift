@@ -73,6 +73,10 @@ class HomeVC: BaseViewController,UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        let vc = SuperDetailVC()
+        let dict = self.dataArr![indexPath.row] as! Dictionary<String, String>
+        vc.titleStr = dict["name"] ?? ""
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     // 获取自己的行程列表

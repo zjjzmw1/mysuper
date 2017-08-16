@@ -35,7 +35,7 @@ class HomeCell: UITableViewCell {
         bgImageV.layer.masksToBounds = true
         bgImageV.contentMode = .scaleAspectFill
         
-        nameLbl = Tool.initALabel(frame: .zero, textString: "", font: FONT_PingFang(fontSize: 17), textColor: UIColor.white)
+        nameLbl = Tool.initALabel(frame: .zero, textString: "", font: FONT_PingFang(fontSize: 20), textColor: UIColor.white)
         nameLbl.textAlignment = .center
         self.contentView.addSubview(nameLbl)
         constrain(bgImageV,nameLbl) { bgImageV,nameLbl in
