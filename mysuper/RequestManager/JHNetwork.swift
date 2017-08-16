@@ -110,7 +110,7 @@ extension JHNetwork {
         needJsonBody = false
         return requestJSON(methodType: .GET, urlStr: url, refreshCache: refreshCache, isCache: true, parameters: parameters, finished: finished)
     }
-    //MARK:缓存POST
+    /// MARK:缓存POST
     func postForJSONV2(url: String, refreshCache: Bool = true, parameters: [String :Any]? = nil, finished: @escaping networkJSON) -> Cancellable? {
         baseUrl = kSBase_url_v2
         needJsonBody = false

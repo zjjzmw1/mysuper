@@ -61,6 +61,7 @@
 		BD2F78501F42EECD00BA5055 /* SuperLeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F784F1F42EECD00BA5055 /* SuperLeftCell.swift */; };
 		BD2F78521F43DF0C00BA5055 /* SuperRightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F78511F43DF0C00BA5055 /* SuperRightCell.swift */; };
 		BD2F78541F43F46D00BA5055 /* ShoppingCarTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F78531F43F46D00BA5055 /* ShoppingCarTool.swift */; };
+		BD2F78561F4438C800BA5055 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F78551F4438C800BA5055 /* TestVC.swift */; };
 		BDB0E3A11F42A0780012E4BD /* EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB0E3931F42900A0012E4BD /* EmptyView.m */; };
 		BDB0E3A21F42A07F0012E4BD /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB0E39F1F429DC00012E4BD /* UIView+Utils.m */; };
 		BDB0E3A51F42A2420012E4BD /* Tooles.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB0E3941F42940A0012E4BD /* Tooles.m */; };
@@ -131,6 +132,7 @@
 		BD2F784F1F42EECD00BA5055 /* SuperLeftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLeftCell.swift; sourceTree = "<group>"; };
 		BD2F78511F43DF0C00BA5055 /* SuperRightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperRightCell.swift; sourceTree = "<group>"; };
 		BD2F78531F43F46D00BA5055 /* ShoppingCarTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCarTool.swift; sourceTree = "<group>"; };
+		BD2F78551F4438C800BA5055 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		BDB0E38D1F428F540012E4BD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BDB0E38E1F428F5E0012E4BD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BDB0E38F1F428F670012E4BD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				BD2F78481F42DE5100BA5055 /* MeVC.swift */,
+				BD2F78551F4438C800BA5055 /* TestVC.swift */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD2F78561F4438C800BA5055 /* TestVC.swift in Sources */,
 				BD2F784C1F42E73C00BA5055 /* UIColor+IOSUtils.m in Sources */,
 				BDC4A5361F42A423001A1FDA /* ESPictureView.m in Sources */,
 				BD2F78541F43F46D00BA5055 /* ShoppingCarTool.swift in Sources */,

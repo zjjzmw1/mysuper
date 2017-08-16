@@ -15,5 +15,11 @@ class MeVC: BaseViewController {
         self.addTitle(titleString: "我的")
         
     }
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let vc = TestVC()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
