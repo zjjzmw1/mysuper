@@ -83,10 +83,32 @@ class CartVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
         
         _ = rightCell.jiaBtn.rx.controlEvent(UIControlEvents.touchUpInside).subscribe(onNext: { [weak rightCell] (btn) in
             rightCell?.numberLbl.text = "1"
+            // 动画的逻辑
+            var rect : CGRect = tableView.rectForRow(at: indexPath)
+            //获取当前cell的相对坐标
+            rect.origin.y = (rect.origin.y - tableView.contentOffset.y)
+            var imageViewRect : CGRect = (rightCell?.iconImgV.frame)!
+            imageViewRect.origin.y = rect.origin.y + imageViewRect.origin.y + NAVIGATIONBAR_HEIGHT
+            
+            ShoppingCarTool().startAnimation(view: (rightCell?.iconImgV)!, andRect: imageViewRect, andFinishedRect: CGPoint(x:SCREEN_WIDTH/2.0,  y: SCREEN_HEIGHT - TABBAR_HEIGHT), andFinishBlock: { (finished : Bool) in
+                let tabBtn : UIView = (self.tabBarController as! XHTabBar).cusTabbar.subviews[1]
+                ShoppingCarTool().shakeAnimation(shakeView: tabBtn)
+            })
         })
         
         _ = rightCell.jianBtn.rx.controlEvent(UIControlEvents.touchUpInside).subscribe(onNext: { [weak rightCell] (btn) in
             rightCell?.numberLbl.text = "0"
+            // 动画的逻辑
+            var rect : CGRect = tableView.rectForRow(at: indexPath)
+            //获取当前cell的相对坐标
+            rect.origin.y = (rect.origin.y - tableView.contentOffset.y)
+            var imageViewRect : CGRect = (rightCell?.iconImgV.frame)!
+            imageViewRect.origin.y = rect.origin.y + imageViewRect.origin.y + NAVIGATIONBAR_HEIGHT
+            
+            ShoppingCarTool().startAnimation(view: (rightCell?.iconImgV)!, andRect: imageViewRect, andFinishedRect: CGPoint(x:SCREEN_WIDTH/2.0,  y: SCREEN_HEIGHT - TABBAR_HEIGHT), andFinishBlock: { (finished : Bool) in
+                let tabBtn : UIView = (self.tabBarController as! XHTabBar).cusTabbar.subviews[1]
+                ShoppingCarTool().shakeAnimation(shakeView: tabBtn)
+            })
         })
         
         return rightCell

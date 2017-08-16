@@ -28,7 +28,7 @@ class SuperRightCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        iconImgV = Tool.initAImageV(frame: .zero)
+        iconImgV = Tool.initAImageV(frame: CGRect.init(x: 10, y: 10, width: 70, height: 70))
         self.contentView.addSubview(iconImgV)
         iconImgV.image = #imageLiteral(resourceName: "all_default")
         constrain(iconImgV) { iconImgV in
