@@ -68,31 +68,33 @@ class SuperRightCell: UITableViewCell {
             priceLbl.height == 20
         }
         
-        jiaBtn = Tool.initAButton(frame: .zero, titleString: "", font: FONT_PingFang(fontSize: 0), textColor: UIColor.clear, bgImage: #imageLiteral(resourceName: "all_add"))
+        jiaBtn = Tool.initAButton(frame: .zero, titleString: "", font: FONT_PingFang(fontSize: 0), textColor: UIColor.clear, bgImage: nil)
+        jiaBtn.setImage(#imageLiteral(resourceName: "all_add"), for: .normal)
         self.contentView.addSubview(jiaBtn)
         constrain(jiaBtn) { jiaBtn in
-            jiaBtn.right == jiaBtn.superview!.right - 10
-            jiaBtn.bottom == jiaBtn.superview!.bottom - 10
-            jiaBtn.width == 23
-            jiaBtn.height == 23
+            jiaBtn.right == jiaBtn.superview!.right - 10 + 10
+            jiaBtn.bottom == jiaBtn.superview!.bottom - 10 + 10
+            jiaBtn.width == 23 + 20
+            jiaBtn.height == 23 + 20
         }
         
         numberLbl = Tool.initALabel(frame: .zero, textString: "", font: FONT_PingFang(fontSize: 14), textColor: UIColor.getMainColorSwift())
         numberLbl.textAlignment = .center
         self.contentView.addSubview(numberLbl)
         constrain(numberLbl, jiaBtn) { numberLbl, jiaBtn in
-            numberLbl.right == jiaBtn.left
+            numberLbl.right == jiaBtn.left + 10
             numberLbl.top == jiaBtn.top
             numberLbl.bottom == jiaBtn.bottom
-            numberLbl.width == 40
+            numberLbl.width == 30
         }
-        jianBtn = Tool.initAButton(frame: .zero, titleString: "", font: FONT_PingFang(fontSize: 0), textColor: UIColor.clear, bgImage:#imageLiteral(resourceName: "all_jian"))
+        jianBtn = Tool.initAButton(frame: .zero, titleString: "", font: FONT_PingFang(fontSize: 0), textColor: UIColor.clear, bgImage: nil)
+        jianBtn.setImage(#imageLiteral(resourceName: "all_jian"), for: .normal)
         self.contentView.addSubview(jianBtn)
         constrain(jianBtn, numberLbl) { jianBtn, numberLbl in
-            jianBtn.right == numberLbl.left
+            jianBtn.right == numberLbl.left + 10
             jianBtn.top == numberLbl.top
-            jianBtn.width == 23
-            jianBtn.height == 23
+            jianBtn.width == 23 + 20
+            jianBtn.height == 23 + 20
         }
         
         self.backgroundColor = UIColor.colorRGB16(value: 0x23aefe, alphe: 0.2)

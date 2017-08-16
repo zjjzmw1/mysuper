@@ -80,6 +80,15 @@ class CartVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
         let rightCell = tableView.dequeueReusableCell(withIdentifier: "SuperRightCell", for: indexPath) as! SuperRightCell
         let nameStr = rightDataArray.object(at: indexPath.row)
         rightCell.updateCell(row: indexPath.row, nameStr: nameStr as! String)
+        
+        _ = rightCell.jiaBtn.rx.controlEvent(UIControlEvents.touchUpInside).subscribe(onNext: { [weak rightCell] (btn) in
+            rightCell?.numberLbl.text = "1"
+        })
+        
+        _ = rightCell.jianBtn.rx.controlEvent(UIControlEvents.touchUpInside).subscribe(onNext: { [weak rightCell] (btn) in
+            rightCell?.numberLbl.text = "0"
+        })
+        
         return rightCell
     }
     

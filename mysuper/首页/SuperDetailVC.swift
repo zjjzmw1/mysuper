@@ -118,6 +118,15 @@ class SuperDetailVC: BaseViewController,UITableViewDelegate,UITableViewDataSourc
             let rightCell = tableView.dequeueReusableCell(withIdentifier: "SuperRightCell", for: indexPath) as! SuperRightCell
             let arr = rightDataArray.object(at: indexPath.section) as! NSArray
             rightCell.updateCell(row: indexPath.row, nameStr: (arr.object(at: indexPath.row) as? String)!)
+            
+            _ = rightCell.jiaBtn.rx.controlEvent(UIControlEvents.touchUpInside).subscribe(onNext: { [weak rightCell] (btn) in
+                rightCell?.numberLbl.text = "1"
+            })
+            
+            _ = rightCell.jianBtn.rx.controlEvent(UIControlEvents.touchUpInside).subscribe(onNext: { [weak rightCell] (btn) in
+                rightCell?.numberLbl.text = "0"
+            })
+            
             return rightCell
         }
     }
