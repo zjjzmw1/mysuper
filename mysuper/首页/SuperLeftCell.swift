@@ -33,13 +33,9 @@ class SuperLeftCell: UITableViewCell {
         self.backgroundColor = UIColor.getSeparatorColorSwift()
     }
     
-    func updateCell(row: Int, nameStr: String, isLeft: Bool) {
+    func updateCell(row: Int, nameStr: String) {
         nameLbl.text = nameStr
-        if isLeft {
-            nameLbl.textAlignment = .center
-        } else {
-            nameLbl.textAlignment = .left
-        }
+        nameLbl.textAlignment = .center
     }
     
     required init?(coder aDecoder: NSCoder) {

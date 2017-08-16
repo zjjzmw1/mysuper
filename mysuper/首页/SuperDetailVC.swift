@@ -51,7 +51,7 @@ class SuperDetailVC: BaseViewController,UITableViewDelegate,UITableViewDataSourc
         leftTableView.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
         
         rightTableView = UITableView.init(frame: CGRect.init(x: leftTableView.right, y: NAVIGATIONBAR_HEIGHT, width: SCREEN_WIDTH - leftTableView.width, height: SCREEN_HEIGHT - NAVIGATIONBAR_HEIGHT - TABBAR_HEIGHT))
-        rightTableView.register(SuperLeftCell.classForCoder(), forCellReuseIdentifier: "SuperLeftCell")
+        rightTableView.register(SuperRightCell.classForCoder(), forCellReuseIdentifier: "SuperRightCell")
         rightTableView.backgroundColor = UIColor.getSeparatorColorSwift()
         rightTableView.delegate = self
         rightTableView.dataSource = self
@@ -92,7 +92,6 @@ class SuperDetailVC: BaseViewController,UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         if tableView == leftTableView {
             return leftDataArray.count
         } else {
@@ -102,20 +101,25 @@ class SuperDetailVC: BaseViewController,UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40
+        if tableView == leftTableView {
+            return 40
+        } else {
+            return 90
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SuperLeftCell", for: indexPath) as! SuperLeftCell
         if tableView == leftTableView {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SuperLeftCell", for: indexPath) as! SuperLeftCell
             cell.selectionStyle = .blue
-            cell.updateCell(row: indexPath.row, nameStr: (leftDataArray.object(at: indexPath.row) as? String)!, isLeft: true)
+            cell.updateCell(row: indexPath.row, nameStr: (leftDataArray.object(at: indexPath.row) as? String)!)
+            return cell
         } else {
+            let rightCell = tableView.dequeueReusableCell(withIdentifier: "SuperRightCell", for: indexPath) as! SuperRightCell
             let arr = rightDataArray.object(at: indexPath.section) as! NSArray
-            cell.updateCell(row: indexPath.row, nameStr: (arr.object(at: indexPath.row) as? String)!, isLeft: false)
+            rightCell.updateCell(row: indexPath.row, nameStr: (arr.object(at: indexPath.row) as? String)!)
+            return rightCell
         }
-        
-        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

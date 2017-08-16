@@ -59,6 +59,7 @@
 		BD2F784C1F42E73C00BA5055 /* UIColor+IOSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB0E3A31F42A1620012E4BD /* UIColor+IOSUtils.m */; };
 		BD2F784E1F42EA4500BA5055 /* SuperDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F784D1F42EA4500BA5055 /* SuperDetailVC.swift */; };
 		BD2F78501F42EECD00BA5055 /* SuperLeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F784F1F42EECD00BA5055 /* SuperLeftCell.swift */; };
+		BD2F78521F43DF0C00BA5055 /* SuperRightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F78511F43DF0C00BA5055 /* SuperRightCell.swift */; };
 		BDB0E3A11F42A0780012E4BD /* EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB0E3931F42900A0012E4BD /* EmptyView.m */; };
 		BDB0E3A21F42A07F0012E4BD /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB0E39F1F429DC00012E4BD /* UIView+Utils.m */; };
 		BDB0E3A51F42A2420012E4BD /* Tooles.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB0E3941F42940A0012E4BD /* Tooles.m */; };
@@ -127,6 +128,7 @@
 		BD2F784A1F42E0AB00BA5055 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		BD2F784D1F42EA4500BA5055 /* SuperDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperDetailVC.swift; sourceTree = "<group>"; };
 		BD2F784F1F42EECD00BA5055 /* SuperLeftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLeftCell.swift; sourceTree = "<group>"; };
+		BD2F78511F43DF0C00BA5055 /* SuperRightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperRightCell.swift; sourceTree = "<group>"; };
 		BDB0E38D1F428F540012E4BD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BDB0E38E1F428F5E0012E4BD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BDB0E38F1F428F670012E4BD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -227,6 +229,7 @@
 				BD2F784A1F42E0AB00BA5055 /* HomeCell.swift */,
 				BD2F784D1F42EA4500BA5055 /* SuperDetailVC.swift */,
 				BD2F784F1F42EECD00BA5055 /* SuperLeftCell.swift */,
+				BD2F78511F43DF0C00BA5055 /* SuperRightCell.swift */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				BDB0E3A21F42A07F0012E4BD /* UIView+Utils.m in Sources */,
 				BDB0E3A11F42A0780012E4BD /* EmptyView.m in Sources */,
 				BD0178A21F428A82002A00F2 /* JCSwiftKitMacro.swift in Sources */,
+				BD2F78521F43DF0C00BA5055 /* SuperRightCell.swift in Sources */,
 				BD0178991F428A82002A00F2 /* UIWebView+JCWebView.swift in Sources */,
 				BD01788B1F428A82002A00F2 /* UIScrollView+JCScrollView.swift in Sources */,
 				BD0178AA1F428A82002A00F2 /* MRPullToRefreshLoadMore.swift in Sources */,
